@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.CodeCommander">
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/codecommander"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".linearSearch">
+
+
+        </activity>
+        <activity android:name=".PlayableLevelSelect" />
+        <activity
+            android:name=".navBar"
+            android:label="Code Commander"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".insertionSort"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".bubbleSort"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".NoughtsAndCrosses"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".commentSystem"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".ProjectSelection"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".ProfileCreation"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".NoughtsAndCrossesWithAI"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".NoughtsAndCrossesWithMoreAdvancedAI"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".Login"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".MainMenu"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".rockPaperScissors"
+            android:screenOrientation="landscape" />
+        <activity android:name=".Countup" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="landscape" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3391198308799271~4632914115" />
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+</manifest>

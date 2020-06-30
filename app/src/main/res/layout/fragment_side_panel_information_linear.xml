@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".sidePanelInformationLinear">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/txt_compiledCodeBlock"
+            android:layout_width="393dp"
+            android:layout_height="785dp"
+            android:autoText="false"
+            android:background="#3C3F41"
+            android:text="This activity will teach\n you the basic concept\n behind algorithms by making\n use of the linear search.\n The linear search is a\n simple searching algorithm\n that iterates through a\n series of numbers and finds a\n the target number. "
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

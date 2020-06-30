@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".sidePanelInformationRock1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/txt_compiledCodeBlock"
+            android:layout_width="393dp"
+            android:layout_height="785dp"
+            android:autoText="false"
+            android:background="#3C3F41"
+            android:text="As some basic examples of\n Big O Notation an algorithm with\n the notation of O(N) means that\n the speed of it is tied to the\n amount of element it\n needs to iterate through.\n So if there was\nan array of 1000 numbers,\n an algorithm with the O(N) notation\n in the worst case would\n have to iterate through\n 1000 numbers.\n Since bubble sorts notation is O(n^2)\n it means it has to iterate through\n all the numbers in that array\n twice since there\n are two nested loops ."
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

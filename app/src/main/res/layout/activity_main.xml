@@ -1,0 +1,612 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#313436"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="163dp"
+        android:layout_height="347dp"
+        android:layout_alignBottom="@+id/VariableTextPlaceHolder"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="-4dp"
+        android:background="#4D4D4E">
+
+        <ImageButton
+            android:id="@+id/btn_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="308dp"
+            android:layout_marginEnd="112dp"
+            android:clickable="false"
+            android:src="@android:drawable/checkbox_on_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="invisible" />
+
+        <Button
+            android:id="@+id/Check"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="304dp"
+            android:layout_marginEnd="44dp"
+            android:text=" Run"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/Hint"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="260dp"
+            android:layout_marginEnd="44dp"
+            android:text="Hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/trashCan"
+            android:layout_width="50dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="116dp"
+            android:layout_marginTop="304dp"
+            android:src="@drawable/trashcan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_compiledCodeBlock"
+            android:layout_width="146dp"
+            android:layout_height="230dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="31dp"
+            android:autoText="false"
+            android:background="#3C3F41"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager2"
+            android:layout_width="150dp"
+            android:layout_height="230dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="31dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.545"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_compiledNotCompiled"
+            android:layout_width="105dp"
+            android:layout_height="34dp"
+            android:layout_marginEnd="25dp"
+            android:text="Code"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textViewCompiled"
+        android:layout_width="74dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="425dp"
+        android:text="TextView"
+        android:translationX="400dp" />
+
+    <TextView
+        android:id="@+id/VariableTextPlaceHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="97dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="4dp"
+        android:autoText="false"
+        android:background="@drawable/buttonbackground"
+        android:text="Test"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:fontFamily="@font/tomnr"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/variableTextPlaceHolder1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="97dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="4dp"
+        android:autoText="false"
+        android:background="@drawable/buttonbackground"
+        android:text="Test"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/tomnr"
+        android:visibility="invisible" />
+
+    <com.example.CodeCommander.MyScrollView
+        android:id="@+id/scrollViewMain"
+        android:layout_width="425dp"
+        android:layout_height="353dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="20dp"
+        android:background="#A0A0A1"
+        android:scrollbarSize="8dp"
+        android:scrollbarStyle="insideInset"
+        android:scrollbarThumbHorizontal="@android:color/white"
+        android:scrollbarThumbVertical="@android:color/white"
+        android:translationX="100dp">
+
+
+        <com.example.CodeCommander.MyHorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarSize="15dp"
+            android:scrollbarStyle="outsideInset"
+            android:scrollbarThumbHorizontal="@android:color/white"
+
+
+            android:scrollbars="horizontal">
+
+
+            <RelativeLayout
+                android:id="@+id/rlStine"
+                android:layout_width="4920px"
+                android:layout_height="2100px"
+                android:translationX="-450px">
+
+
+                <ImageView
+                    android:id="@+id/blockPlace"
+                    android:layout_width="56dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="430dp"
+                    android:layout_marginTop="23dp"
+                    android:src="@android:color/black"
+                    android:visibility="invisible" />
+
+
+            </RelativeLayout>
+        </com.example.CodeCommander.MyHorizontalScrollView>
+
+
+    </com.example.CodeCommander.MyScrollView>
+
+
+    <ScrollView
+        android:id="@+id/btnScrollView"
+        android:layout_width="169dp"
+        android:layout_height="348dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-15dp"
+        android:layout_marginBottom="0dp"
+        android:background="@android:color/white"
+        android:fadeScrollbars="false"
+        android:scrollbarSize="3dp"
+        android:scrollbarThumbVertical="@android:color/white"
+        android:translationX="20dp">
+
+
+        <LinearLayout
+            android:id="@+id/scrollViewLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#4D4D4E"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/IF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="11dp"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:src="@drawable/ifnewblock"
+                android:translationX="10dp"
+                app:srcCompat="@drawable/ifnewblock" />
+
+            <ImageView
+                android:id="@+id/elseIf"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="11dp"
+
+                android:src="@drawable/elseifnew"
+                android:translationX="0dp"
+                app:srcCompat="@drawable/elseifnew" />
+
+            <ImageView
+                android:id="@+id/Else"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="11dp"
+
+                android:src="@drawable/elsenewblock"
+                android:translationX="0dp"
+                app:srcCompat="@drawable/elsenewblock" />
+
+            <ImageView
+                android:id="@+id/While"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="11dp"
+
+                android:src="@drawable/whilenewblock"
+                android:translationX="0dp"
+                app:srcCompat="@drawable/whilenewblock" />
+
+            <ImageView
+                android:id="@+id/doWhile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="11dp"
+
+                android:src="@drawable/dowhilenewnblock"
+                android:translationX="0dp"
+                app:srcCompat="@drawable/dowhilenewnblock" />
+
+            <ImageView
+                android:id="@+id/For"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="11dp"
+
+                android:src="@drawable/fornewblock"
+                android:translationX="0dp"
+                app:srcCompat="@drawable/fornewblock" />
+            <ImageView
+                android:id="@+id/Display"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="11dp"
+
+                android:src="@drawable/displaynewblock"
+                android:translationX="0dp"
+                app:srcCompat="@drawable/displaynewblock" />
+
+            <ImageView
+                android:id="@+id/Input"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="11dp"
+
+                android:src="@drawable/inputnewblock"
+                android:translationX="0dp"
+                app:srcCompat="@drawable/inputnewblock" />
+
+            <ImageView
+                android:id="@+id/End"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="11dp"
+
+                android:src="@drawable/endnewblock"
+                android:translationX="0dp"
+                app:srcCompat="@drawable/endnewblock" />
+
+            <ImageView
+                android:id="@+id/IntergerVariable"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="11dp"
+
+                android:src="@drawable/integervariablename"
+                android:translationX="0dp"
+                app:srcCompat="@drawable/integervariablename" />
+            <ImageView
+                android:id="@+id/Integer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="11dp"
+
+                android:src="@drawable/integernamenewblock"
+                android:translationX="0dp"
+                app:srcCompat="@drawable/integernamenewblock" />
+            <ImageView
+                android:id="@+id/ArrayName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="11dp"
+
+                android:src="@drawable/arraynameblock"
+                android:translationX="0dp"
+                app:srcCompat="@drawable/arraynameblock" />
+            <ImageView
+                android:id="@+id/ArrayValue"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="11dp"
+
+                android:src="@drawable/arrayvalueblock"
+                android:translationX="0dp"
+                app:srcCompat="@drawable/arrayvalueblock" />
+            <ImageView
+                android:id="@+id/stringVaraibleNamne"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="11dp"
+
+                android:src="@drawable/stringvariablenameblock"
+                android:translationX="0dp"
+                app:srcCompat="@drawable/stringvariablenameblock" />
+            <ImageView
+                android:id="@+id/String"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="11dp"
+
+                android:src="@drawable/stringnamenewblock"
+                android:translationX="0dp"
+                app:srcCompat="@drawable/stringnamenewblock" />
+            <ImageView
+                android:id="@+id/charVariableName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="11dp"
+
+                android:src="@drawable/charvariablenameblock"
+                android:translationX="0dp"
+                app:srcCompat="@drawable/charvariablenameblock" />
+            <ImageView
+                android:id="@+id/Char"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="11dp"
+
+                android:src="@drawable/charnamenewblock"
+                android:translationX="0dp"
+                app:srcCompat="@drawable/charnamenewblock" />
+            <ImageView
+                android:id="@+id/Boolean"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="11dp"
+
+                android:src="@drawable/booleannamenewblock"
+                android:translationX="0dp"
+                app:srcCompat="@drawable/booleannamenewblock" />
+            <ImageView
+                android:id="@+id/booleanVariableValue"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="11dp"
+
+                android:src="@drawable/booleanvariablevalueblock2"
+                android:translationX="0dp"
+                app:srcCompat="@drawable/booleanvariablevalueblock2" />
+
+
+
+
+
+
+            <ImageView
+                android:id="@+id/And"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/andblock"
+                android:translationX="10dp"
+                android:translationY="10dp"
+                app:srcCompat="@drawable/andblock" />
+            <ImageView
+                android:id="@+id/Equals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/equalsnewblock"
+                android:translationX="10dp"
+                android:translationY="10dp"
+                app:srcCompat="@drawable/equalsnewblock" />
+            <ImageView
+                android:id="@+id/equalEqual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/equalsequalsnewblock"
+                android:translationX="10dp"
+                android:translationY="10dp"
+                app:srcCompat="@drawable/equalsequalsnewblock" />
+            <ImageView
+                android:id="@+id/Plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/plusnewblock"
+                android:translationX="10dp"
+                android:translationY="10dp"
+                app:srcCompat="@drawable/plusnewblock" />
+            <ImageView
+                android:id="@+id/plusPlus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/plusplus"
+                android:translationX="10dp"
+                android:translationY="10dp"
+                app:srcCompat="@drawable/plusplus" />
+            <ImageView
+                android:id="@+id/plusEqual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/plusequalsnewblock"
+                android:translationX="10dp"
+                android:translationY="10dp"
+                app:srcCompat="@drawable/plusequalsnewblock" />
+
+            <ImageView
+                android:id="@+id/Minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/minusnewblock"
+                android:translationX="10dp"
+                android:translationY="10dp"
+                app:srcCompat="@drawable/minusnewblock" />
+            <ImageView
+                android:id="@+id/minusEqual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/minusequalsnewblock"
+                android:translationX="10dp"
+                android:translationY="10dp"
+                app:srcCompat="@drawable/minusequalsnewblock" />
+            <ImageView
+                android:id="@+id/greaterThan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/greaterthannewblock"
+                android:translationX="10dp"
+                android:translationY="10dp"
+                app:srcCompat="@drawable/greaterthannewblock" />
+            <ImageView
+                android:id="@+id/greaterThanEqual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/greaterthanequalnewblock"
+                android:translationX="10dp"
+                android:translationY="10dp"
+                app:srcCompat="@drawable/greaterthanequalnewblock" />
+            <ImageView
+                android:id="@+id/lowerThan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/lowerthannewblock"
+                android:translationX="10dp"
+                android:translationY="10dp"
+                app:srcCompat="@drawable/lowerthannewblock" />
+            <ImageView
+                android:id="@+id/lowerThanEqual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/lowerthanequalnewblock"
+                android:translationX="10dp"
+                android:translationY="10dp"
+                app:srcCompat="@drawable/lowerthanequalnewblock" />
+            <ImageView
+                android:id="@+id/Modulus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/modulusnewblock"
+                android:translationX="10dp"
+                android:translationY="10dp"
+                app:srcCompat="@drawable/modulusnewblock" />
+            <ImageView
+                android:id="@+id/Division"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/divisionnewblock"
+                android:translationX="10dp"
+                android:translationY="10dp"
+                app:srcCompat="@drawable/divisionnewblock" />
+            <ImageView
+                android:id="@+id/Multiply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/multiplynewblock"
+                android:translationX="10dp"
+                android:translationY="10dp"
+                app:srcCompat="@drawable/multiplynewblock" />
+            <ImageView
+                android:id="@+id/notEqual1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/notequalnewblock"
+                android:translationX="10dp"
+                android:translationY="10dp"
+                app:srcCompat="@drawable/notequalnewblock" />
+            <ImageView
+                android:id="@+id/Random"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/randomblock"
+                android:translationX="10dp"
+                android:translationY="10dp"
+                app:srcCompat="@drawable/randomblock" />
+
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="1dp"
+        android:background="#3B3B3C"
+        android:text="Information"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:translationX="595dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="1dp"
+        android:background="#3B3B3C"
+        android:text="Blocks"
+        android:textAlignment="center"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="425dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="1dp"
+        android:background="#3B3B3C"
+        android:text="Workspace"
+        android:textAlignment="center"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>
